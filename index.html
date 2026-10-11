@@ -14,6 +14,9 @@
                 <h1>Hobo Bag Boutique</h1>
             </div>
             <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                </button>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#collections">Collections</a></li>
@@ -39,27 +42,44 @@
             <h2>Featured Collections</h2>
             <a href="#" class="view-all">View All</a>
         </div>
-        <div class="collections-grid">
-            <div class="collection-item">
-                <img src="https://static.zara.net/assets/public/3f64/8c7e/397e4fddb9a5/a7e5d6bf3619/13318820700-e1/13318820700-e1.jpg?ts=1783433906440&w=938" alt="Leather Collection">
-                <div class="collection-overlay">
-                    <h3>Leather Essentials</h3>
-                    <p>Premium leather hobo bags</p>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <div class="collection-item">
+                        <img src="https://static.zara.net/assets/public/3f64/8c7e/397e4fddb9a5/a7e5d6bf3619/13318820700-e1/13318820700-e1.jpg?ts=1783433906440&w=938" alt="Leather Collection">
+                        <div class="collection-overlay">
+                            <h3>Leather Essentials</h3>
+                            <p>Premium leather hobo bags</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="collection-item">
+                        <img src="https://static.zara.net/assets/public/298b/0dfe/cdaf42e39afb/4c7e79ada27f/13312820800-e1/13312820800-e1.jpg?ts=1783433911553&w=938" alt="Canvas Collection">
+                        <div class="collection-overlay">
+                            <h3>Canvas Classics</h3>
+                            <p>Durable canvas designs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="collection-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc43POt9mudTDmmk29nfa9mytc9p8guqIcNPgCGEZR4A&s=10" alt="Suede Collection">
+                        <div class="collection-overlay">
+                            <h3>Suede Luxury</h3>
+                            <p>Soft suede finishes</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="collection-item">
-                <img src="https://static.zara.net/assets/public/298b/0dfe/cdaf42e39afb/4c7e79ada27f/13312820800-e1/13312820800-e1.jpg?ts=1783433911553&w=938" alt="Canvas Collection">
-                <div class="collection-overlay">
-                    <h3>Canvas Classics</h3>
-                    <p>Durable canvas designs</p>
-                </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn prev" aria-label="Previous slide">&#9664;</button>
+                <button class="carousel-btn next" aria-label="Next slide">&#9654;</button>
             </div>
-            <div class="collection-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc43POt9mudTDmmk29nfa9mytc9p8guqIcNPgCGEZR4A&s=10" alt="Suede Collection">
-                <div class="collection-overlay">
-                    <h3>Suede Luxury</h3>
-                    <p>Soft suede finishes</p>
-                </div>
+            <div class="carousel-dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
             </div>
         </div>
     </section>
