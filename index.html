@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobo Bag Boutique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Hobo Bag Boutique</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#cart">Cart (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h2>Discover Our Collection</h2>
+            <p>Handcrafted hobo bags for every adventure</p>
+            <a href="#shop" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="collections-section" id="collections">
+        <div class="section-header">
+            <h2>Featured Collections</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <div class="collections-grid">
+            <div class="collection-item">
+                <img src="https://static.zara.net/assets/public/3f64/8c7e/397e4fddb9a5/a7e5d6bf3619/13318820700-e1/13318820700-e1.jpg?ts=1783433906440&w=938" alt="Leather Collection">
+                <div class="collection-overlay">
+                    <h3>Leather Essentials</h3>
+                    <p>Premium leather hobo bags</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="https://static.zara.net/assets/public/298b/0dfe/cdaf42e39afb/4c7e79ada27f/13312820800-e1/13312820800-e1.jpg?ts=1783433911553&w=938" alt="Canvas Collection">
+                <div class="collection-overlay">
+                    <h3>Canvas Classics</h3>
+                    <p>Durable canvas designs</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc43POt9mudTDmmk29nfa9mytc9p8guqIcNPgCGEZR4A&s=10" alt="Suede Collection">
+                <div class="collection-overlay">
+                    <h3>Suede Luxury</h3>
+                    <p>Soft suede finishes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="new-arrivals" id="shop">
+        <div class="section-header">
+            <h2>New Arrivals</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <div class="filters-bar">
+            <div class="sort-options">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option value="default">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+        </div>
+        <div id="product-grid" class="product-grid">
+            <!-- Products will be injected here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section" id="cart">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Your Shopping Bag</h2>
+            </div>
+            <div class="cart-content">
+                <div class="cart-items">
+                    <div id="cart-items" class="cart-items-list">
+                        <!-- Cart items will be injected here by JavaScript -->
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <div class="summary-title">
+                        <h3>Order Summary</h3>
+                    </div>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span class="summary-value" id="cart-subtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span class="summary-value" id="cart-shipping">Free</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span class="summary-value" id="cart-total">₹0.00</span>
+                        </div>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="btn btn-outline btn-clear" type="button">
+                            Clear Bag
+                        </button>
+                        <button class="btn btn-primary btn-checkout" type="button">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section" id="checkout">
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <h2>Checkout</h2>
+                <div class="checkout-steps">
+                    <div class="step active">1. Shipping Address</div>
+                    <div class="step">2. Payment Details</div>
+                    <div class="step">3. Review Order</div>
+                </div>
+            </div>
+            <div class="checkout-content">
+                <div class="checkout-form">
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address2">Apartment, Suite, etc. (Optional)</label>
+                            <input type="text" id="address2" name="address2">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group-half">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group-half">
+                                <label for="state">State/Province</label>
+                                <input type="text" id="state" name="state" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group-half">
+                                <label for="zip">ZIP/Postal Code</label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                            <div class="form-group-half">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" value="India" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-notes">Order Notes (Optional)</label>
+                            <textarea id="order-notes" name="order-notes" rows="3" placeholder="Any special instructions for delivery..."></textarea>
+                        </div>
+
+                        <div class="payment-method">
+                            <h3>Payment Method</h3>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="credit-card" checked>
+                                    <span>Credit/Debit Card</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="upi">
+                                    <span>UPI</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="cod">
+                                    <span>Cash on Delivery</span>
+                                </label>
+                            </div>
+
+                            <!-- UPI QR Code Section -->
+                            <div class="upi-qr-code" id="upi-qr-code" style="display: none;">
+                                <h4>UPI Payment</h4>
+                                <div class="qr-code-display">
+                                    <div class="qr-code-placeholder" id="qr-code-placeholder">
+                                        QR Code Will Appear Here
+                                    </div>
+                                    <p id="upi-id-display">UPI ID: hoboboutique@upi</p>
+                                </div>
+                                <div class="qr-code-actions">
+                                    <button class="btn btn-outline" id="refresh-qr-code">
+                                        Refresh QR Code
+                                    </button>
+                                </div>
+                                <p class="qr-instructions">
+                                    Scan the QR code with any UPI app (PhonePe, Google Pay, Paytm, etc.) to complete your payment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-details" id="card-details">
+                            <h4>Card Details</h4>
+                            <div class="form-row">
+                                <div class="form-group-half">
+                                    <label for="card-number">Card Number</label>
+                                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form-group-half">
+                                    <label for="expiry-date">Expiry Date</label>
+                                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-half">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123">
+                                </div>
+                                <div class="form-group-half">
+                                    <label for="card-name">Name on Card</label>
+                                    <input type="text" id="card-name" name="card-name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-place-order">
+                            Place Order
+                        </button>
+                    </form>
+                </div>
+
+                <div class="checkout-summary">
+                    <div class="summary-title">
+                        <h3>Your Order</h3>
+                    </div>
+                    <div class="summary-items" id="checkout-items">
+                        <!-- Cart items will be displayed here -->
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span class="summary-value" id="checkout-subtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span class="summary-value" id="checkout-shipping">Free</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span class="summary-value" id="checkout-total">₹0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Community</h2>
+            <p>Get 10% off your first order and early access to new collections</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Materials</a></li>
+                    <li><a href="#">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Create Account</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Pinterest">Pinterest</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hobo Bag Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
